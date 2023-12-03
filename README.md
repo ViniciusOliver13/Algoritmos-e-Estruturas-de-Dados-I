@@ -1,2 +1,2 @@
-# Estrutura-de-Dados-I
+# Algoritmos-e-Estrutura-de-Dados-I
 Exercícios resolvidos ao longo das Unidades.
