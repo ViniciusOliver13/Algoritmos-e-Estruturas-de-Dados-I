@@ -20,7 +20,7 @@ int main(){
         scanf("%d", vetor + i);
     }
 
-    free(0);
+    free(vetor);
     
     return 0;
 }
