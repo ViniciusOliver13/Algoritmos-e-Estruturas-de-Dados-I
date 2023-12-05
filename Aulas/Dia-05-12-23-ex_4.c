@@ -11,15 +11,13 @@ int main(){
     }
 
     printf("Digite seu nome: ");
-    scanf("%[^\n]s", nome);
+    scanf("%[^\n]s", nome);        //Lendo o nome completo de uma pessoa com espaços.
 
-    nome = realloc(nome, strlen(nome) * sizeof(char));
-
-    printf("SEU NOME: %s", nome);
+    nome = realloc(nome, strlen(nome) * sizeof(char));       //Usando a função "realloc" para realocar a memória de acordo com
+                                                             //o tamanho do nome.    
+    printf("SEU NOME: %s", nome);                            //Usando a função "strlen()" para saber o tamanho de toda a string.    
 
     free(nome);
 
     return 0;
 }   
-
-
