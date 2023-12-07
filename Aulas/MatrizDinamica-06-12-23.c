@@ -3,8 +3,8 @@
 #include <locale.h>
 
 /*
-        ExercÌcio: Aloque dinamicamente uma matriz de inteiros 5x5 e preencha cada
-        elemento da matriz com o seu respectivo Ìndice (matriz[i][j] = i*5 + j). Em
+        Exerc√≠cio: Aloque dinamicamente uma matriz de inteiros 5x5 e preencha cada
+        elemento da matriz com o seu respectivo √≠ndice (matriz[i][j] = i*5 + j). Em
         seguida, imprima a matriz.
 */
 
@@ -13,11 +13,11 @@ int main(){
 
     int **mat, i, j;
 
-    mat = malloc(5 * sizeof(int*));                  //Alocando memÛria para os vetores de ponteiros para ponteiros (linhas).    
+    mat = (int**) malloc(5 * sizeof(int*));          //Alocando mem√≥ria para os vetores de ponteiros para ponteiros (linhas).    
 
     if (mat == NULL){
-        printf("Erro na alocaÁ„o");                  //Verificando se a alocaÁ„o dos vetores de ponteiros
-        exit(1);                                     //para ponteiros ocorreu de maneira satisfatÛria.    
+        printf("Erro na aloca√ß√£o");                  //Verificando se a aloca√ß√£o dos vetores de ponteiros
+        exit(1);                                     //para ponteiros ocorreu de maneira satisfat√≥ria.    
     }
     
     
@@ -25,14 +25,14 @@ int main(){
         *(mat + i) = (int*) malloc(5 * sizeof(int)); //Alocando os vetores (colunas) da matriz.
 
         if (*(mat + i) == NULL){
-            printf("Erro na alocaÁ„o de memÛria!");  //Verificando se a aloÁ„o dos vetores (colunas) est·
-            exit(1);                                 //ocorrendo de maneira satisfatÛria.
+            printf("Erro na aloca√ß√£o de mem√≥ria!");  //Verificando se a alo√ß√£o dos vetores (colunas) est√°
+            exit(1);                                 //ocorrendo de maneira satisfat√≥ria.
         }
     }
     
     for(i = 0; i < 5; i++){
         for(j = 0; j < 5; j++){
-            *(*(mat + i) + j) = i * 5 + j;           //Preenchedo a matriz de n˙meros inteiros.
+            *(*(mat + i) + j) = i * 5 + j;           //Preenchedo a matriz de n√∫meros inteiros.
         }
     }
 
@@ -44,10 +44,10 @@ int main(){
     }
     
     for ( i = 0; i < 5; i++){
-        free(*(mat + i ));                           //Liberando a memÛra dos vetores (colunas) da matriz.  
+        free(*(mat + i ));                           //Liberando a mem√≥ra dos vetores (colunas) da matriz.  
     }
 
-    free(mat);                                       //Liberando a memÛria dos vetores de ponteiros para ponteiros (linhas).
+    free(mat);                                       //Liberando a mem√≥ria dos vetores de ponteiros para ponteiros (linhas).
 
     return 0;
 }
