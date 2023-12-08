@@ -2,92 +2,92 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <string.h>               //Importando a biblioteca "string.h" para conseguir manipular as strings e fazer
-                                  //comparaÁıes entre elas.  
+                                  //compara√ß√µes entre elas.  
 int main(){
     setlocale(LC_ALL,"Portuguese");
 
     int i = 0, total = 0, test = 0, h = 0, m = 0;
-    char **per_1 = (char**) malloc(1 * sizeof(char*));          //Alocando memÛria para cada resposta das perguntas.
-    char **per_2 = (char**) malloc(1 * sizeof(char*));          //Para cada nova pessoa entrevistada um novo ponteiro de resposta ser· criado.
+    char **per_1 = (char**) malloc(1 * sizeof(char*));          //Alocando mem√≥ria para cada resposta das perguntas.
+    char **per_2 = (char**) malloc(1 * sizeof(char*));          //Para cada nova pessoa entrevistada um novo ponteiro de resposta ser√° criado.
                                                                 
 
     if(per_1 == NULL || per_2 == NULL){
-        printf("Erro na alocaÁ„o de memÛria!");                 //Verificando se alocaÁ„o de memÛria ocorreu bem.
+        printf("Erro na aloca√ß√£o de mem√≥ria!");                 //Verificando se aloca√ß√£o de mem√≥ria ocorreu bem.
         free(per_1); free(per_2);
         exit(1);
     }
 
-    do{                                                         //Iniciando um laÁo de repetiÁ„o com o "do while".                                                              
+    do{                                                         //Iniciando um la√ßo de repeti√ß√£o com o "do while".                                                              
 
         printf("----------------------------\nEntrevistados: %d pessoas\n", total);
-        printf("----------------------------\n[ 1 ] Adicionar Entrevistado\n[ 2 ] ");          //Menu de opÁıes.
-        printf("Encerrar Pesquisa\n[ 3 ] Sair\n----------------------------\nOP«√O: ");
-        scanf("%d", &test);                                                                    //Lendo a opÁ„o que o usu·rio digitou.
+        printf("----------------------------\n[ 1 ] Adicionar Entrevistado\n[ 2 ] ");          //Menu de op√ß√µes.
+        printf("Encerrar Pesquisa\n[ 3 ] Sair\n----------------------------\nOP√á√ÉO: ");
+        scanf("%d", &test);                                                                    //Lendo a op√ß√£o que o usu√°rio digitou.
         fflush(stdin);
 
-        switch (test){                                         //Fazendo um "switch" na vari·vel "test" para saber qual bloco de comando ser· executado.
+        switch (test){                                         //Fazendo um "switch" na vari√°vel "test" para saber qual bloco de comando ser√° executado.
             case 1:
-                per_1 = (char**) realloc(per_1, (1 + i) * sizeof(char*));        //OpÁ„o 1: Realocando memÛria para criar um novo ponteiro   
+                per_1 = (char**) realloc(per_1, (1 + i) * sizeof(char*));        //Op√ß√£o 1: Realocando mem√≥ria para criar um novo ponteiro   
                 per_2 = (char**) realloc(per_2, (1 + i) * sizeof(char*));        //para cada resposta.
 
                 if(per_1 == NULL || per_2 == NULL){
-                    printf("Erro na alocaÁ„o de memÛria!");                     
-                    free(per_1); free(per_2);                                    //Verificando se a alocaÁ„o de memÛria ocorreu bem.   
+                    printf("Erro na aloca√ß√£o de mem√≥ria!");                     
+                    free(per_1); free(per_2);                                    //Verificando se a aloca√ß√£o de mem√≥ria ocorreu bem.   
                     exit(1);
                 }
 
-                per_1[i] = (char*) malloc(1 * sizeof(char));         //Alocando memÛria para conseguir armazenar as respostas               
+                per_1[i] = (char*) malloc(1 * sizeof(char));         //Alocando mem√≥ria para conseguir armazenar as respostas               
                 per_2[i] = (char*) malloc(1 * sizeof(char));         //das pessoas dentro de cada ponteiro criado.  
 
                 if(per_1[i] == NULL || per_2[i] == NULL ){;
-                    printf("Erro na alocaÁ„o de memÛria!");
-                    free(per_1); free(per_2);                        //Verificando se a alocaÁ„o de memÛria ocorreu bem.   
+                    printf("Erro na aloca√ß√£o de mem√≥ria!");
+                    free(per_1); free(per_2);                        //Verificando se a aloca√ß√£o de mem√≥ria ocorreu bem.   
                     exit(1);
                 }
 
-                printf("Perguntas:\n1∫ Qual È o seu sexo? [M/F]\n>>");      //Fazendo as 2 perguntas e armazenando dentro de cada vetor
-                scanf(" %1s", per_1[i]);                                    //de resposta. OBS: lendo apenas a 1∫ letra que o usu·rio digitar
+                printf("Perguntas:\n1¬∫ Qual √© o seu sexo? [M/F]\n>>");      //Fazendo as 2 perguntas e armazenando dentro de cada vetor
+                scanf(" %1s", per_1[i]);                                    //de resposta. OBS: lendo apenas a 1¬∫ letra que o usu√°rio digitar
                 fflush(stdin);                                              //usando "%1s".
-                printf("2∫ VocÍ gostou do novo produto? [S/N]\n>>");        //Limpando o "buffer do teclado" apÛs cada "scanf" com a funÁ„o "fflush(stdin)".
+                printf("2¬∫ Voc√™ gostou do novo produto? [S/N]\n>>");        //Limpando o "buffer do teclado" ap√≥s cada "scanf" com a fun√ß√£o "fflush(stdin)".
                 scanf(" %1s", per_2[i]);                                    
                 fflush(stdin);
 
                 if(strcmp(per_1[i], "F") == 0 && strcmp(per_2[i], "S") == 0){         //Verificando se as pessoas do sexo feminino gostaram do novo produto.
-                    m++;                                                              //Se sim, È incrementado em +1 a vari·vel "m". 
+                    m++;                                                              //Se sim, √© incrementado em +1 a vari√°vel "m". 
                 }
 
-                if(strcmp(per_1[i], "M") == 0 && strcmp(per_2[i], "N") == 0){         //Verificando se as pessoas do sexo masculino n„o gostaram do novo produto.      
-                    h++;                                                              //Se sim, È incrementado em +1 a vari·vel "h".  
+                if(strcmp(per_1[i], "M") == 0 && strcmp(per_2[i], "N") == 0){         //Verificando se as pessoas do sexo masculino n√£o gostaram do novo produto.      
+                    h++;                                                              //Se sim, √© incrementado em +1 a vari√°vel "h".  
                 }
 
-                i++;                //ApÛs responder as 2 perguntas, as vari·veis "i" e "total" s„o incrementadas em +1
-                total++;            //para que na prÛxima interaÁ„o seja alocado os novos vetores de resposta de cada nova pessoa.
+                i++;                //Ap√≥s responder as 2 perguntas, as vari√°veis "i" e "total" s√£o incrementadas em +1
+                total++;            //para que na pr√≥xima intera√ß√£o seja alocado os novos vetores de resposta de cada nova pessoa.
 
                 break;
             case 2:
-                printf("Pessoas do sexo feminino que gostaram do produto: %.1f%%\n", (m * 100.0 / total));          //OpÁ„o 2: Imprimir o percentual de pessoas sexo feminino que gostaram do produto e 
-                printf("Pessoas do sexo masculino que n„o gostaram do produto: %.1f%%\n", (h * 100.0 / total));     //das pessoas do sexo masculino que n„o gostaram do produto. 
+                printf("Pessoas do sexo feminino que gostaram do produto: %.1f%%\n", (m * 100.0 / total));          //Op√ß√£o 2: Imprimir o percentual de pessoas sexo feminino que gostaram do produto e 
+                printf("Pessoas do sexo masculino que n√£o gostaram do produto: %.1f%%\n", (h * 100.0 / total));     //das pessoas do sexo masculino que n√£o gostaram do produto. 
 
                 break;
             case 3:
-                printf("Saindo...");            //OpÁ„o 3: Caso o usu·rio digite 3, o programa ser· encerrado.
-                exit(0);
+                printf("Saindo...");            //Op√ß√£o 3: Caso o usu√°rio digite 3, o programa ser√° encerrado.
+                continue;
 
                 break;
             default:
-                printf("OpÁ„o Inv·lida!\n");    //Caso o usu·rio digitar uma opÁ„o diferente do menu, ser· impresso
-                                                //uma mensagem de "OpÁ„o Inv·lida!" e ser· reiniciado o laÁo de repetiÁ„o.
+                printf("Op√ß√£o Inv√°lida!\n");    //Caso o usu√°rio digitar uma op√ß√£o diferente do menu, ser√° impresso
+                                                //uma mensagem de "Op√ß√£o Inv√°lida!" e ser√° reiniciado o la√ßo de repeti√ß√£o.
                 break;
         }   
 
     } while (test != 3);
 
     for (i = 0; i < total; i++){                
-        free(per_1[i]);                         //ApÛs o termino do laÁo de repetiÁ„o, s„o liberados da memÛria os vetores
+        free(per_1[i]);                         //Ap√≥s o termino do la√ßo de repeti√ß√£o, s√£o liberados da mem√≥ria os vetores
         free(per_2[i]);                         //que armazenam as respostas de cada pessoa.
     }
 
-    free(per_1);        //Liberando a memÛria dos vetores de ponteiros criados para 
+    free(per_1);        //Liberando a mem√≥ria dos vetores de ponteiros criados para 
     free(per_2);        //cada resposta.
 
     return 0;
