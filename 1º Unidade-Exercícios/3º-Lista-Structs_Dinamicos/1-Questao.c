@@ -4,46 +4,53 @@
 
 typedef struct funcionario{                     //Declarando a struct "funcionario".
     char nome[50], cargo[30];
-    int idade, identificador;
+    int identificador;
     float salario;
 } funcionario;
 
-void preencher(funcionario *point, int tam){    //FunÁ„o para preencher o vetor de structs "funcionario".
+void preencher(funcionario *point, int tam){    //Fun√ß√£o para preencher o vetor de structs "funcionario".
 
     printf("Nome: ");
     scanf(" %[^\n]", point[tam].nome);
-    printf("Idade: ");
-    scanf("%d", &point[tam].idade);
     printf("Cargo: ");
     scanf(" %[^\n]", point[tam].cargo);
-    printf("Sal·rio: R$");
+    printf("Sal√°rio: R$");
     scanf("%f", &point[tam].salario);
     printf("Identificador: " );
     scanf("%d", &point[tam].identificador);
 }
 
-void alterarSal(funcionario *point, int tam){   //FunÁ„o para alterar o sal·rio de algum funcion·rio cadastrado.
+void alterarSal(funcionario *point, int tam){   //Fun√ß√£o para alterar o sal√°rio de algum funcion√°rio cadastrado.
     char test;
-    int i;
+    int z, i;
 
-    printf("Deseja mudar o sal·rio de algum funcion·rio?");
+    printf("Deseja mudar o sal√°rio de algum funcion√°rio?");
     scanf(" %c", &test);
 
     if(test == 'S' || test == 's'){
         system("cls");
 
         for(i = 0; i < tam; i++){
-            printf("Nome do funcion·rio: %s\nN˙mero do sistema: %d\n\n", point[i].nome, i);
+            printf("Nome do funcion√°rio: %s\nIdentificador: %d\n\n", point[i].nome, point[i].identificador);
         }
 
-        printf("Digite o n˙mero de sistema: ");
+        printf("Digite o identificador: ");
         scanf("%d", &i);
-        printf("Sal·rio atual desse funcion·rio: R$%.2f\nQual È o novo sal·rio? R$", point[i].salario);
-        scanf(" %f", &point[i].salario);
-        printf("Sal·rio modificado com sucesso!!\n");
+
+        for(z = 0; z < tam; z++){
+            if(point[z].identificador == i){
+                printf("Sal√°rio atual desse funcion√°rio: R$%.2f\nQual √© o novo sal√°rio? R$", point[z].salario);
+                scanf(" %f", &point[z].salario);
+                printf("Sal√°rio modificado com sucesso!!\n");
+                break;
+            }
+        }
+        printf("Funcion√°rio n√£o encontrado!");
+        system("pause");  
     }
 }
-void maiorMenorSal(funcionario *point, int tam){    //FunÁ„o para saber o funcion·rio com o maior e o menor sal·rio e tambÈm seu cargo.
+
+void maiorMenorSal(funcionario *point, int tam){    //Fun√ß√£o para saber o funcion√°rio com o maior e o menor sal√°rio e tamb√©m seu cargo.
     int maior, menor, i = 0;
     float sal_menor = 0, sal_maior = 0;
     sal_menor = point[i].salario;
@@ -57,21 +64,20 @@ void maiorMenorSal(funcionario *point, int tam){    //FunÁ„o para saber o funcio
             menor = i;
         }
     }
-    printf("\n=====================\nFuncion·rio com o maior sal·rio:\n");
-    printf("Nome: %s\nCargo: %s\nSal·rio: R$%.2f\n", point[maior].nome, point[maior].cargo, point[maior].salario);      //Imprimindo o nome, cargo, sal·rios desses funcion·rios
-    printf("=====================\nFuncion·rio com o menor sal·rio:\n");
-    printf("Nome: %s\nCargo: %s\nSal·rio: R$%.2f\n=====================", point[menor].nome, point[menor].cargo, point[menor].salario);
+    printf("\n=====================\nFuncion√°rio com o maior sal√°rio:\n");
+    printf("Nome: %s\nCargo: %s\nSal√°rio: R$%.2f\n", point[maior].nome, point[maior].cargo, point[maior].salario);      //Imprimindo o nome, cargo, sal√°rios desses funcion√°rios
+    printf("=====================\nFuncion√°rio com o menor sal√°rio:\n");
+    printf("Nome: %s\nCargo: %s\nSal√°rio: R$%.2f\n=====================", point[menor].nome, point[menor].cargo, point[menor].salario);
 }
 
-void imprimir(funcionario *point, int tam){     //FunÁ„o para imprimir o nome, idade, cargo, sal·rio e identificador de todos os funcion·rios cadastrados.  
+void imprimir(funcionario *point, int tam){     //Fun√ß√£o para imprimir o nome, cargo, sal√°rio e identificador de todos os funcion√°rios cadastrados.  
     int i;
 
     for ( i = 0; i < tam; i++){
         printf("---------------------\n");
         printf("Nome: %s\n", point[i].nome); 
-        printf("Idade: %d\n", point[i].idade);   
         printf("Cargo: %s\n", point[i].cargo);
-        printf("Sal·rio: %.2f\n", point[i].salario);
+        printf("Sal√°rio: %.2f\n", point[i].salario);
         printf("Identificador: %d\n", point[i].identificador); 
     }
     printf("---------------------");
@@ -82,14 +88,14 @@ int main(){
 
     int tam = 0;
     char test; 
-    funcionario *p = (funcionario*) malloc(sizeof(funcionario));    //Alocando memÛria para a vari·vel "p"do tamanho do tipo "funcionario".
+    funcionario *p = (funcionario*) malloc(sizeof(funcionario));    //Alocando mem√≥ria para a vari√°vel "p"do tamanho do tipo "funcionario".
 
     if(p == NULL){
-        printf("\nErro na alocaÁ„o!");      //Verificando se a alocaÁ„o de memÛria ocorreu bem.
+        printf("\nErro na aloca√ß√£o!");      //Verificando se a aloca√ß√£o de mem√≥ria ocorreu bem.
         exit(1);    
     }
 
-    do{                                     //Iniciando o laÁo de repetiÁ„o "do while()" para perguntar ao usu·rio se ele quer adicionar um funcion·rio.
+    do{                                     //Iniciando o la√ßo de repeti√ß√£o "do while()" para perguntar ao usu√°rio se ele quer adicionar um funcion√°rio.
 
         printf("Adicionar funcionario? ");      
         scanf(" %c", &test);
@@ -98,18 +104,18 @@ int main(){
             
             system("cls");
 
-            p = (funcionario*) realloc(p, (tam + 1) * sizeof(funcionario));     //Realocando a memÛria conforme novos funcion·rios s„o adicionados.
+            p = (funcionario*) realloc(p, (tam + 1) * sizeof(funcionario));     //Realocando a mem√≥ria conforme novos funcion√°rios s√£o adicionados.
 
             if(p == NULL){
-                printf("\nErro na realocaÁ„o!");    //Verificando se a realocaÁ„o de memÛria ocorreu bem.
+                printf("\nErro na realoca√ß√£o!");    //Verificando se a realoca√ß√£o de mem√≥ria ocorreu bem.
                 exit(1);
             }
 
-            preencher(p, tam);          //Chamada para a funÁ„o "preencher".
+            preencher(p, tam);          //Chamada para a fun√ß√£o "preencher".
 
-            tam++;                      //Incremento de +1 a cada novo funcion·rio.
+            tam++;                      //Incremento de +1 a cada novo funcion√°rio.
 
-            alterarSal(p, tam);         //Chamada para a funÁ„o "alterarSal".
+            alterarSal(p, tam);         //Chamada para a fun√ß√£o "alterarSal".
 
         }else{
             system("cls");
@@ -119,11 +125,11 @@ int main(){
     } while (test != 'N' || test != 'n');
 
     system("cls");
-    printf("\nTerminando a execuÁ„o!\n\n");
+    printf("\nTerminando a execu√ß√£o!\n\n");
 
-    maiorMenorSal(p, tam);              //Chamando as funÁıes "maiorMenorSal" e "imprimir".
+    maiorMenorSal(p, tam);              //Chamando as fun√ß√µes "maiorMenorSal" e "imprimir".
     imprimir(p, tam);
-    free(p);                            //Liberando memÛria ao fim da execuÁ„o.
+    free(p);                            //Liberando mem√≥ria ao fim da execu√ß√£o.
 
     return 0;
 }
