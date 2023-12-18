@@ -15,7 +15,6 @@ void preencher(pessoa *point, int tam){         //Função para preencher todos 
     printf("Digite o numero do documento: ");
     scanf("%d", &point[tam].documento);
 }
-
 void imprimir(pessoa *point, int tam){
     int  i;                                     //Função para imprimir todas as pessoas cadastradas.
 
@@ -56,14 +55,15 @@ void atualizarIdade(pessoa *point, int tam){
 }
 
 void maisVelhoMaisnovo(pessoa *point, int tam){     //Função para saber quem é a pessoa mais velha e a mais nova.
-    int pos1, pos2, velho = 0, novo = 0, i = 0;
-    novo = 200;     
+    int pos1 = 0, pos2 = 0, i = 0;
+    int novo = point[0].idade, velho = point[0].idade;     
     
     for (i = 0; i < tam; i++){
         if (novo > point[i].idade){
             novo = point[i].idade;
             pos2 = i;
         }
+
         if (velho < point[i].idade){
             velho = point[i].idade;
             pos1 = i;
