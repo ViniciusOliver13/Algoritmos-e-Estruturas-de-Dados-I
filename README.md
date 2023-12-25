@@ -1,4 +1,4 @@
-# Algoritmos e Estrutura de Dados I <img align="right" width="300" height="200" src="https://assecom.ufersa.edu.br/wp-content/uploads/sites/24/2014/09/Manual-Identidade-Visual.png">
+# Algoritmos e Estrutura de Dados I <img align="right" width="110" height="170" src="https://assecom.ufersa.edu.br/wp-content/uploads/sites/24/2014/09/PNG-bras%C3%A3o-Ufersa.png">
 **Bacharelado Interdisciplinar em Tecnologia da Informação - UFERSA**
 ### Objetivos📌
 * Conhecer e compreender os aspectos envolvidos na identificação e representação adequada dos dados de um programa e suas
