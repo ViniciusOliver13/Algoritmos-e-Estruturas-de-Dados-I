@@ -10,6 +10,7 @@ características funcionais; resolver problemas utilizando algoritmos e estrutur
  - ***PONTEIROS***  
  - ***ALOCAÇÃO DINÂMICA***
  - ***TIPOS ESTRUTURADOS***
+ - ***UNIÃO E ENUMERAÇÕES***
 > #### *Esses conceitos são pilares fundamentais na programação em C, fornecendo flexibilidade, eficiência e controle direto sobre a manipulação de dados e gerenciamento de memória.*
 - ####  *Conteúdo das aulas [clique aqui][4]*    
 ### Exercícios📌
@@ -17,7 +18,7 @@ características funcionais; resolver problemas utilizando algoritmos e estrutur
 - *[Lista Ponteiros][1]*    
 - *[Lista Alocação Dinâmica][2]*   
 - *[Lista Tipos Estruturados][3]*
-
+- 
 ---
 ### 2º Unidade:  
 ***EM BREVE!***
