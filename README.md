@@ -18,7 +18,7 @@ características funcionais; resolver problemas utilizando algoritmos e estrutur
 - *[Lista Ponteiros][1]*    
 - *[Lista Alocação Dinâmica][2]*   
 - *[Lista Tipos Estruturados][3]*
-- 
+- *[Lista Tipo União][5]*
 ---
 ### 2º Unidade:  
 ***EM BREVE!***
@@ -27,5 +27,6 @@ características funcionais; resolver problemas utilizando algoritmos e estrutur
 [2]: https://github.com/ViniciusOliver13/Algoritmos-e-Estruturas-de-Dados-I/tree/main/1%C2%BA%20Unidade-Exerc%C3%ADcios/2%C2%BA-%20Lista-Vetores_Dinamicos "Lista Alocação Dinâmica"
 [3]: https://github.com/ViniciusOliver13/Algoritmos-e-Estruturas-de-Dados-I/tree/main/1%C2%BA%20Unidade-Exerc%C3%ADcios/3%C2%BA-Lista-Structs_Dinamicos "Lista Tipos Estruturados"
 [4]: https://github.com/ViniciusOliver13/Algoritmos-e-Estruturas-de-Dados-I/tree/main/Aulas "Aulas"
+[5]: https://github.com/ViniciusOliver13/Algoritmos-e-Estruturas-de-Dados-I/tree/c0689f545a356b288f4f4d0023fa515e65712bcd/1%C2%BA%20Unidade-Exerc%C3%ADcios/4%C2%BA-%20Lista-Union "Lista tipo Uniao"
 
 
