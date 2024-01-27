@@ -12,21 +12,22 @@ características funcionais; resolver problemas utilizando algoritmos e estrutur
  - ***TIPOS ESTRUTURADOS***
  - ***UNION E ENUM***
 > #### *Esses conceitos são pilares fundamentais na programação em C, fornecendo flexibilidade, eficiência e controle direto sobre a manipulação de dados e gerenciamento de memória.*
-- ####  *Conteúdo das aulas [clique aqui][4]*    
+- ####  *Conteúdo das aulas [clique aqui][6]*    
 ### Exercícios📌
 >
 - *[Lista Ponteiros][1]*    
 - *[Lista Alocação Dinâmica][2]*   
-- *[Lista Tipos Estruturados][3]*
-- *[Lista Tipos Onion e Enum][5]*
+- *[Lista Tipos Estruturados-1][3]*
+- *[Lista Tipos Onion e Enum][4]*
+- *[Lista Tipos Estruturados-2][5]*
 ---
 ### 2º Unidade:  
 ***EM BREVE!***
 
-[1]: https://github.com/ViniciusOliver13/Algoritmos-e-Estruturas-de-Dados-I/tree/main/1%C2%BA%20Unidade-Exerc%C3%ADcios/1%C2%BA-%20Lista "Lista Ponteiros"
-[2]: https://github.com/ViniciusOliver13/Algoritmos-e-Estruturas-de-Dados-I/tree/main/1%C2%BA%20Unidade-Exerc%C3%ADcios/2%C2%BA-%20Lista-Vetores_Dinamicos "Lista Alocação Dinâmica"
-[3]: https://github.com/ViniciusOliver13/Algoritmos-e-Estruturas-de-Dados-I/tree/main/1%C2%BA%20Unidade-Exerc%C3%ADcios/3%C2%BA-Lista-Structs_Dinamicos "Lista Tipos Estruturados"
-[4]: https://github.com/ViniciusOliver13/Algoritmos-e-Estruturas-de-Dados-I/tree/main/Aulas "Aulas"
-[5]: https://github.com/ViniciusOliver13/Algoritmos-e-Estruturas-de-Dados-I/tree/9366f51adfb78a57b121042982b5c5de5b29b0ad/1%C2%BA%20Unidade-Exerc%C3%ADcios/4%C2%BA-%20Lista-Union-E-Enum "Lista tipo Union e Enum"
-
+[1]: https://github.com/ViniciusOliver13/Algoritmos-e-Estruturas-de-Dados-I/tree/0da9cbb8ba1bbfbc8d42495ffc307bb2b5ccf968/1%C2%BA%20Unidade/1%C2%BA%20Unidade-Exerc%C3%ADcios/1%C2%BA-%20Lista "Lista Ponteiros"
+[2]: https://github.com/ViniciusOliver13/Algoritmos-e-Estruturas-de-Dados-I/tree/0da9cbb8ba1bbfbc8d42495ffc307bb2b5ccf968/1%C2%BA%20Unidade/1%C2%BA%20Unidade-Exerc%C3%ADcios/2%C2%BA-%20Lista-Vetores_Dinamicos "Lista Alocação Dinâmica"
+[3]: https://github.com/ViniciusOliver13/Algoritmos-e-Estruturas-de-Dados-I/tree/0da9cbb8ba1bbfbc8d42495ffc307bb2b5ccf968/1%C2%BA%20Unidade/1%C2%BA%20Unidade-Exerc%C3%ADcios/3%C2%BA-Lista-Structs_Dinamicos "Lista Tipos Estruturados"
+[4]: https://github.com/ViniciusOliver13/Algoritmos-e-Estruturas-de-Dados-I/tree/0da9cbb8ba1bbfbc8d42495ffc307bb2b5ccf968/1%C2%BA%20Unidade/1%C2%BA%20Unidade-Exerc%C3%ADcios/4%C2%BA-%20Lista-Union-E-Enum "Lista Union e Enum"
+[5]: https://github.com/ViniciusOliver13/Algoritmos-e-Estruturas-de-Dados-I/tree/0da9cbb8ba1bbfbc8d42495ffc307bb2b5ccf968/1%C2%BA%20Unidade/1%C2%BA%20Unidade-Exerc%C3%ADcios/5%C2%BA-%20Lista-Tipos-Estruturados "LIsta Tipos Estruturados"
+[6]: https://github.com/ViniciusOliver13/Algoritmos-e-Estruturas-de-Dados-I/tree/0da9cbb8ba1bbfbc8d42495ffc307bb2b5ccf968/1%C2%BA%20Unidade/Aulas "Aulas"
 
