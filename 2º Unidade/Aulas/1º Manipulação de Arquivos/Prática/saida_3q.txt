@@ -1,0 +1,7 @@
+Vinicius		MEDIA: 8.43		Aprovado
+Edu		MEDIA: 8.33		Aprovado
+Marcelo		MEDIA: 6.90		Reprovado
+Samuel		MEDIA: 7.47		Aprovado
+Davi		MEDIA: 7.87		Aprovado
+Aparecida		MEDIA: 8.07		Aprovado
+Ph		MEDIA: 8.27		Aprovado

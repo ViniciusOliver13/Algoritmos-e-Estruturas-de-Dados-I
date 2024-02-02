@@ -1,0 +1,7 @@
+Vinicius   10   7   8.3
+Edu   10   7   8
+Marcelo   5.2   7.4   8.1
+Samuel   8.4   6.2   7.8
+Davi   6.4   7.9   9.3
+Aparecida   8.9   7.4   7.9
+Ph   7.8   9.0   8.0
