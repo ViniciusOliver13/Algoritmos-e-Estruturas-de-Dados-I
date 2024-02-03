@@ -1,0 +1,12 @@
+Nome: Vinicius
+id: 13
+Salário: R$3120,00
+
+Nome: marcelo
+id: 33
+Salário: R$2000,00
+
+Nome: Ph
+id: 45
+Salário: R$1200,00
+
