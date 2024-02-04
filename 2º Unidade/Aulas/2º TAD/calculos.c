@@ -1,5 +1,7 @@
 #include <stdio.h>
-#include "funcoes.h"        //Arquivo onde é realizado os cálculos das funções.
+#include "funcoes.h"      
+
+//Arquivo onde é realizado todos os cálculos das funções presentes no arquivo "funcoes.h".
 
 int adicao(int a1, int a2){
     int res;
