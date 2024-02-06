@@ -1,42 +1,66 @@
 #include <stdio.h>
-#include "funcoes.h"      
+#include <stdlib.h>
+#include "aluno.h"      //TAD: Aluno
 
-//Arquivo onde é realizado todos os cálculos das funções presentes no arquivo "funcoes.h".
+struct aluno{
+    char nome[20];
+    int matricula;
+    float IRA;
+};
 
-int adicao(int a1, int a2){
-    int res;
-    res = a1 + a2;
+Aluno *recebe_dados(void){
+    Aluno *estudante = (Aluno*) malloc(sizeof(Aluno));
 
-    return res;
-}
-
-int subtracao(int a1, int a2){
-    int res;
-    res = a1 - a2;
-
-    return res;
-}
-
-int multiplicacao(int a1, int a2){
-    int res;
-    res = a1 * a2;
-
-    return res;
-}
-
-float divisao(int a1, int a2){
-    float res;
-    res = a1 / a2;
-    
-    return res;
-}
-
-int potenciacao(int a1, int a2){
-    int i, res = 1;
-    res = a1;
-    for(i = 1; i < a2; i++){
-        res *= a1;
+    if(estudante == NULL){
+        printf("Sem memoria!");
+        exit(1);
     }
     
-    return res;
+    printf("Informe o nome do aluno: ");
+    scanf(" %[^\n]", estudante->nome);
+    printf("Informe a matricula: ");
+    scanf("%d", &estudante->matricula);
+    printf("Informe o IRA: ");
+    scanf(" %f", &estudante->IRA);
+
+    return estudante;
+}
+
+Aluno *matricular_alunos(){
+    Aluno *p = (Aluno*)malloc(sizeof(Aluno));
+    char test;
+    int i = 0;
+    
+    if(p == NULL){
+        printf("Sem memoria!");
+        exit(1);
+    }
+    
+    do{
+        p[i] = *recebe_dados();
+        i++;
+        printf("Deseja parar e mostrar os dados? [S/N] ");
+        scanf(" %c", &test);
+
+    }while(test == 'n' || test == 'N');
+
+    imprimir(p, i);
+
+    return p;
+}
+
+void imprimir(Aluno *p, int tam){
+    int i;
+
+    system("cls");
+
+    for ( i = 0; i < tam; i++){
+        printf("Nome: %s\n", p[i].nome);
+        printf("Matricula: %d\n", p[i].matricula);
+        printf("IRA %.2f\n------------------\n", p[i].IRA);
+    }
+}
+
+void liberar(Aluno *p){
+    free(p);
 }
