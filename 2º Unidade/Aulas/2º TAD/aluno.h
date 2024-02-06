@@ -1,15 +1,16 @@
-//Definição de novo tipo: Aluno
+//DefiniÃ§Ã£o de novo tipo: Aluno
 typedef struct aluno Aluno;
 
-//Função que aloca memória para uma struct aluno, recebe via teclado 
+//FunÃ§Ã£o que aloca memÃ³ria para uma struct aluno, recebe dados via teclado 
 //e retorna um ponteiro para Aluno.
 Aluno *recebe_dados(void);
 
-//Função que imprime os dado(s) dos aluno(s).
+//FunÃ§Ã£o que matricula um determinado nÃºmero de alunos escolhido pelo usuÃ¡rio.
+Aluno *matricular_alunos(int max);
+
+//FunÃ§Ã£o que imprime os dado(s) dos aluno(s).
 void imprimir(Aluno *ponteiro, int tamanho);
 
-//Função que libera memória ao fim da execução.
+//FunÃ§Ã£o que libera memÃ³ria ao fim da execuÃ§Ã£o.
 void liberar(Aluno *ponteiro);
 
-//Função que matricula um determinado número de alunos.
-Aluno *matricular_alunos(int max);
