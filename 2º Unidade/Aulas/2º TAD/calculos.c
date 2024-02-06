@@ -1,66 +1,42 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include "aluno.h"      //TAD: Aluno
+#include "funcoes.h"      
 
-struct aluno{
-    char nome[20];
-    int matricula;
-    float IRA;
-};
+//Arquivo onde é realizado todos os cálculos das funções presentes no arquivo "funcoes.h".
 
-Aluno *recebe_dados(void){
-    Aluno *estudante = (Aluno*) malloc(sizeof(Aluno));
+int adicao(int a1, int a2){
+    int res;
+    res = a1 + a2;
 
-    if(estudante == NULL){
-        printf("Sem memoria!");
-        exit(1);
-    }
-    
-    printf("Informe o nome do aluno: ");
-    scanf(" %[^\n]", estudante->nome);
-    printf("Informe a matricula: ");
-    scanf("%d", &estudante->matricula);
-    printf("Informe o IRA: ");
-    scanf(" %f", &estudante->IRA);
-
-    return estudante;
+    return res;
 }
 
-Aluno *matricular_alunos(){
-    Aluno *p = (Aluno*)malloc(sizeof(Aluno));
-    char test;
-    int i = 0;
-    
-    if(p == NULL){
-        printf("Sem memoria!");
-        exit(1);
-    }
-    
-    do{
-        p[i] = *recebe_dados();
-        i++;
-        printf("Deseja parar e mostrar os dados? [S/N] ");
-        scanf(" %c", &test);
+int subtracao(int a1, int a2){
+    int res;
+    res = a1 - a2;
 
-    }while(test == 'n' || test == 'N');
-
-    imprimir(p, i);
-
-    return p;
+    return res;
 }
 
-void imprimir(Aluno *p, int tam){
-    int i;
+int multiplicacao(int a1, int a2){
+    int res;
+    res = a1 * a2;
 
-    system("cls");
-
-    for ( i = 0; i < tam; i++){
-        printf("Nome: %s\n", p[i].nome);
-        printf("Matricula: %d\n", p[i].matricula);
-        printf("IRA %.2f\n------------------\n", p[i].IRA);
-    }
+    return res;
 }
 
-void liberar(Aluno *p){
-    free(p);
+float divisao(int a1, int a2){
+    float res;
+    res = a1 / a2;
+    
+    return res;
+}
+
+int potenciacao(int a1, int a2){
+    int i, res = 1;
+    res = a1;
+    for(i = 1; i < a2; i++){
+        res *= a1;
+    }
+    
+    return res;
 }
