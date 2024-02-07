@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h> 
-#include "aluno.c"
+#include "aluno.h"
 /* TAD : Tipo Abstrato de Dados */
 /* TAD : um novo tipo (struct) + cojunto de operações */
 

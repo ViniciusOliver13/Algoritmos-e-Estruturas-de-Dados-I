@@ -26,14 +26,26 @@ Aluno *recebe_dados(void){
     return estudante;
 }
 
-Aluno *matricular_alunos(int tam){
-    Aluno *p = (Aluno*)malloc(tam * sizeof(Aluno));
-    int i;
+Aluno *matricular_alunos(){
+    Aluno *p = (Aluno*)malloc(sizeof(Aluno));
+    char test;
+    int i = 0;
     
-    for (i = 0; i < tam; i++){
-        p[i] = *recebe_dados();
+    if(p == NULL){
+        printf("Sem memoria!");
+        exit(1);
     }
     
+    do{
+        p[i] = *recebe_dados();
+        i++;
+        printf("Deseja parar e mostrar os dados? [S/N] ");
+        scanf(" %c", &test);
+
+    }while(test == 'n' || test == 'N');
+
+    imprimir(p, i);
+
     return p;
 }
 
@@ -47,7 +59,6 @@ void imprimir(Aluno *p, int tam){
         printf("Matricula: %d\n", p[i].matricula);
         printf("IRA %.2f\n------------------\n", p[i].IRA);
     }
-    
 }
 
 void liberar(Aluno *p){
