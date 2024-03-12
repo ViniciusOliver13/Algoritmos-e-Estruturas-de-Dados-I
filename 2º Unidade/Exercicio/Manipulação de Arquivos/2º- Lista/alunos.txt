@@ -1,0 +1,15 @@
+Nome: Vinicius
+1º nota: 10,0
+2º nota: 10,0
+3º nota: 10,0
+
+Nome: edu
+1º nota: 8,0
+2º nota: 8,0
+3º nota: 8,0
+
+Nome: Marcelo
+1º nota: 7,0
+2º nota: 8,0
+3º nota: 8,0
+

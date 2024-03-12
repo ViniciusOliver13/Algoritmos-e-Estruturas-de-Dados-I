@@ -1,0 +1,3 @@
+Menor número: 45
+Maior número: 2
+Média: 12.30

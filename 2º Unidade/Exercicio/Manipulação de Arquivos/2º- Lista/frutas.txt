@@ -1,0 +1,12 @@
+Nome: BANANA
+Preço: R$1,00
+
+Nome: JACA
+Preço: R$10,00
+
+Nome: MANGA
+Preço: R$4,50
+
+Nome: PERA
+Preço: R$2,49
+
